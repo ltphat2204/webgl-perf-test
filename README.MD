@@ -33,7 +33,7 @@ Người dùng có thể kiểm tra, kiểm định hoặc triển khai lại m�
 
 ## 📄 Giấy phép
 
-Mã nguồn được phát hành theo giấy phép MIT.
+Mã nguồn được phát hành theo giấy phép [/LICENSE](MIT).
 
 ---
 
