@@ -29,8 +29,12 @@ export function useTestState() {
     if (currentIndex + 1 < GEOMETRIES.length) {
       setCurrentIndex(currentIndex + 1)
       setTestReady(false)
+      // Return true to indicate we need to start countdown for next test
+      return true
     } else {
       setDone(true)
+      // Return false to indicate test is complete
+      return false
     }
   }
 

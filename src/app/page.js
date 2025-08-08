@@ -30,6 +30,14 @@ export default function PerformanceTest() {
 
   const { isCountingDown, countdown, startCountdown } = useCountdown()
 
+  const handleStopAndContinue = async (result) => {
+    const shouldContinue = await handleStop(result)
+    if (shouldContinue) {
+      // Start countdown for next test
+      startCountdown(handleTestReady)
+    }
+  }
+
   const handleAcceptAndStart = () => {
     handleAccept()
     startCountdown(handleTestReady)
@@ -49,7 +57,7 @@ export default function PerformanceTest() {
         shouldRenderScene={shouldRenderScene}
         currentGeometry={currentGeometry}
         currentIndex={currentIndex}
-        onStop={handleStop}
+        onStop={handleStopAndContinue}
         onRestartRequired={handleRestartRequired}
       />
 
