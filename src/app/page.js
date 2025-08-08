@@ -30,8 +30,8 @@ export default function PerformanceTest() {
 
   const { isCountingDown, countdown, startCountdown } = useCountdown()
 
-  const handleStopAndContinue = async (result) => {
-    const shouldContinue = await handleStop(result)
+  const handleStopAndContinue = (result) => {
+    const shouldContinue = handleStop(result)
     if (shouldContinue) {
       // Start countdown for next test
       startCountdown(handleTestReady)

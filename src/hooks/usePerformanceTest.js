@@ -10,6 +10,15 @@ export function usePerformanceTest(geometryDef, onStop, onRestartRequired) {
   const { gl } = useThree()
   const runningRef = useRef(true)
 
+  // Reset state when geometry changes (new test starts)
+  useEffect(() => {
+    setMeshes([])
+    setFrameDropCount(0)
+    lowFpsCounter.current = 0
+    frameRef.current = performance.now()
+    runningRef.current = true
+  }, [geometryDef])
+
   useEffect(() => {
     const handleVisibility = () => {
       if (document.visibilityState === 'hidden') {
@@ -60,7 +69,7 @@ export function usePerformanceTest(geometryDef, onStop, onRestartRequired) {
         drawCalls: currentDrawCalls,
       })
     } else {
-      // Add new mesh
+      // Add new mesh - use functional update for better performance
       setMeshes(prev => [...prev, {
         key: prev.length,
         position: [

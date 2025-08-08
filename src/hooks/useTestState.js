@@ -24,7 +24,11 @@ export function useTestState() {
 
   const handleStop = async (result) => {
     setResults(prev => [...prev, result])
-    await logTestResult(result)
+    
+    // Log result in background, don't wait for it
+    logTestResult(result).catch(error => 
+      console.error('Failed to log test result:', error)
+    )
 
     if (currentIndex + 1 < GEOMETRIES.length) {
       setCurrentIndex(currentIndex + 1)
