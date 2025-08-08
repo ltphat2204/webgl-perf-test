@@ -1,6 +1,6 @@
 # Khảo sát hiệu năng WebGL 2.0
 
-Dự án này cung cấp mã nguồn cho một khảo sát đánh giá hiệu năng WebGL 2.0 trong trình duyệt, nhằm thu thập dữ liệu thực tế về khả năng xử lý đồ họa 3D từ các thiết bị phổ biến.
+Dự án này cung cấp mã nguồn cho một khảo sát đánh giá hiệu năng WebGL 2.0 trong trình duyệt, nhằm thu thập dữ liệu thực tế về khả năng xử lý đồ họa 3D từ các thiết bị phổ biến. Bạn có thể tham gia khảo sát [tại đây](https://webgl-perf-test.vercel.app/).
 
 ## 🎯 Mục đích khảo sát
 
@@ -33,7 +33,7 @@ Người dùng có thể kiểm tra, kiểm định hoặc triển khai lại m�
 
 ## 📄 Giấy phép
 
-Mã nguồn được phát hành theo giấy phép [/LICENSE](MIT).
+Mã nguồn được phát hành theo giấy phép [MIT](/LICENSE).
 
 ---
 
