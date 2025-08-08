@@ -1,0 +1,63 @@
+import { useState } from 'react'
+import { GEOMETRIES } from '../constants/geometries'
+import { logTestResult } from '../utils/performance'
+
+export function useTestState() {
+  const [accepted, setAccepted] = useState(null)
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [results, setResults] = useState([])
+  const [done, setDone] = useState(false)
+  const [isRestartRequired, setIsRestartRequired] = useState(false)
+  const [testReady, setTestReady] = useState(false)
+
+  const handleAccept = () => {
+    setAccepted(true)
+  }
+
+  const handleDecline = () => {
+    setAccepted(false)
+  }
+
+  const handleTestReady = () => {
+    setTestReady(true)
+  }
+
+  const handleStop = async (result) => {
+    setResults(prev => [...prev, result])
+    await logTestResult(result)
+
+    if (currentIndex + 1 < GEOMETRIES.length) {
+      setCurrentIndex(currentIndex + 1)
+      setTestReady(false)
+    } else {
+      setDone(true)
+    }
+  }
+
+  const handleRestartRequired = () => {
+    setIsRestartRequired(true)
+    setTestReady(false)
+  }
+
+  const handleRestart = () => {
+    setIsRestartRequired(false)
+  }
+
+  return {
+    // State
+    accepted,
+    currentIndex,
+    results,
+    done,
+    isRestartRequired,
+    testReady,
+    
+    // Actions
+    handleAccept,
+    handleDecline,
+    handleTestReady,
+    handleStop,
+    handleRestartRequired,
+    handleRestart,
+  }
+}
