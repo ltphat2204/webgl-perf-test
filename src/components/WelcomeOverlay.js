@@ -39,6 +39,18 @@ export default function WelcomeOverlay({ onAccept, onDecline }) {
         <p className="text-sm text-gray-300 mb-6">
           Dữ liệu chỉ phục vụ cho mục đích nghiên cứu và cải thiện trải nghiệm 3D trên trình duyệt.
         </p>
+        <p className="text-sm text-blue-300 mb-6">
+          🔎 Mã nguồn ứng dụng hiện đang được công khai tại{' '}
+          <a
+            href="https://github.com/ltphat2204/webgl-perf-test"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-blue-400"
+          >
+            github.com/ltphat2204/webgl-perf-test
+          </a>{' '}
+          để người dùng có thể kiểm tra.
+        </p>
         <div className="flex justify-end gap-4">
           <button onClick={onDecline} className="px-4 py-2 text-sm rounded-lg bg-red-500/70 hover:bg-red-600/80">
             Tôi không đồng ý
