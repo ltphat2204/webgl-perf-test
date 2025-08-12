@@ -33,7 +33,7 @@ export const metadata = {
     siteName: "WebGL 2.0 Survey",
     images: [
       {
-        url: "https://asset.cloudinary.com/ltphat2204/2e6ce7bd673d9a8107a42155a333691a",
+        url: "https://res.cloudinary.com/ltphat2204/image/upload/v1754614540/webgl-survey.png",
         width: 1200,
         height: 630,
         alt: "WebGL 2 Performance Survey"
@@ -47,7 +47,7 @@ export const metadata = {
     title: "Khảo sát hiệu năng WebGL 2.0 thực tế trên trình duyệt",
     description:
       "Trang thử nghiệm nhằm khảo sát hiệu năng WebGL 2.0 thông qua số lượng draw call, mesh và vertex có thể xử lý ổn định ở tốc độ 60FPS. Kết quả được thu thập phục vụ nghiên cứu tối ưu hóa các ứng dụng 3D trên web.",
-    images: ["https://asset.cloudinary.com/ltphat2204/2e6ce7bd673d9a8107a42155a333691a"]
+    images: ["https://res.cloudinary.com/ltphat2204/image/upload/v1754614540/webgl-survey.png"]
   },
   alternates: {
     canonical: "https://webgl-perf-test.vercel.app/"
