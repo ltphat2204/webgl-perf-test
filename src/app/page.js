@@ -1,6 +1,7 @@
 'use client'
 
 import { GEOMETRIES } from '../constants'
+import { useEffect, useState } from 'react'
 import { useTestState, useCountdown } from '../hooks'
 import {
   WelcomeOverlay,
@@ -9,7 +10,8 @@ import {
   RestartOverlay,
   DeclineMessage,
   ResultsOverlay,
-  TestCanvas
+  TestCanvas,
+  MobileNoticeOverlay
 } from '../components'
 
 export default function PerformanceTest() {
@@ -48,42 +50,55 @@ export default function PerformanceTest() {
     startCountdown(handleTestReady)
   }
 
-  const shouldRenderScene = accepted === true && testReady && !done && !isRestartRequired
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const ua = navigator.userAgent || navigator.vendor || (window.opera ?? '')
+    const mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(ua)
+    setIsMobile(mobile)
+  }, [])
+
+  const shouldRenderScene = !isMobile && accepted === true && testReady && !done && !isRestartRequired
   const currentGeometry = GEOMETRIES[currentIndex]
 
   return (
     <div className="w-screen h-screen relative">
-      <TestCanvas
+      {isMobile && (
+        <MobileNoticeOverlay forceShow />
+      )}
+      {!isMobile && (
+        <TestCanvas
         shouldRenderScene={shouldRenderScene}
         currentGeometry={currentGeometry}
         currentIndex={currentIndex}
         onStop={handleStopAndContinue}
         onRestartRequired={handleRestartRequired}
-      />
+        />
+      )}
 
-      {accepted === null && (
+      {!isMobile && accepted === null && (
         <WelcomeOverlay
           onAccept={handleAcceptAndStart}
           onDecline={handleDecline}
         />
       )}
 
-      {accepted === false && <DeclineMessage />}
+      {!isMobile && accepted === false && <DeclineMessage />}
 
-      {isCountingDown && <CountdownOverlay countdown={countdown} />}
+      {!isMobile && isCountingDown && <CountdownOverlay countdown={countdown} />}
 
-      {accepted === true && !done && !isRestartRequired && (
+      {!isMobile && accepted === true && !done && !isRestartRequired && (
         <TestProgress currentIndex={currentIndex} />
       )}
 
-      {isRestartRequired && (
+      {!isMobile && isRestartRequired && (
         <RestartOverlay
           currentIndex={currentIndex}
           onRestart={handleRestartAndCountdown}
         />
       )}
 
-      {done && <ResultsOverlay results={results} />}
+      {!isMobile && done && <ResultsOverlay results={results} />}
     </div>
   )
 }
