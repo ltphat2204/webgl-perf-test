@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "title": "Khảo sát hiệu năng WebGL 2.0 thực tế trên trình duyệt",
+    "description": "Trang thử nghiệm nhằm khảo sát hiệu năng WebGL 2.0 thông qua số lượng draw call, mesh và vertex có thể xử lý ổn định ở tốc độ 60FPS. Kết quả được thu thập phục vụ nghiên cứu tối ưu hóa các ứng dụng 3D trên web."
+  },
+  "mobile": {
+    "title": "Thiết bị di động được phát hiện",
+    "body1": "Bài kiểm tra hiệu năng WebGL này không hướng tới người dùng trên thiết bị di động.",
+    "body2": "Vui lòng truy cập bằng máy tính để bàn hoặc laptop để có kết quả chính xác và trải nghiệm tốt hơn.",
+    "ok": "Đã hiểu"
+  },
+  "welcome": {
+    "title": "🧪 Chào mừng bạn đến với thử nghiệm hiệu năng WebGL",
+    "intro": "Ứng dụng sẽ hiển thị nhiều đối tượng 3D để đánh giá hiệu năng trình duyệt. Trong quá trình thử nghiệm, chúng tôi sẽ thu thập các thông tin sau:",
+    "hardwareTitle": "🖥️ Thông tin phần cứng:",
+    "cores": "lõi",
+    "platform": "Nền tảng",
+    "metricsTitle": "📊 Thông tin hiệu năng sẽ ghi nhận:",
+  "metricMeshLabel": "Số lượng mesh tối đa",
+  "metricMeshTail": "mà máy bạn xử lý mượt ở 60FPS",
+  "metricVerticesLabel": "Tổng số vertex",
+  "metricVerticesTail": "đã render tại ngưỡng hiệu năng",
+  "metricDrawCallsLabel": "Số draw call",
+  "metricDrawCallsTail": "GPU đã thực hiện mỗi frame",
+    "warning": "⚠️ Vui lòng không bật thêm tab, ứng dụng nặng hoặc phần mềm ghi màn hình trong lúc thử nghiệm để đảm bảo kết quả chính xác nhất.",
+    "privacy": "Dữ liệu chỉ phục vụ cho mục đích nghiên cứu và cải thiện trải nghiệm 3D trên trình duyệt.",
+    "sourceLead": "🔎 Mã nguồn ứng dụng hiện đang được công khai tại",
+    "sourceTail": "để người dùng có thể kiểm tra.",
+    "agree": "Tôi đồng ý, bắt đầu",
+    "decline": "Tôi không đồng ý"
+  },
+  "decline": {
+    "title": "Cảm ơn bạn đã ghé thăm.",
+    "description": "Bạn đã từ chối tham gia thử nghiệm."
+  },
+  "restart": {
+    "title": "Đã phát hiện gián đoạn!",
+    "body": "Có thể bạn đã chuyển tab hoặc máy bị giảm FPS đột ngột. Vui lòng thử lại để đảm bảo kết quả chính xác.",
+    "button": "Bắt đầu lại bước {step}"
+  },
+  "progress": {
+    "title": "Bước {step}/{total}",
+    "test": "Thử nghiệm"
+  },
+  "results": {
+    "title": "Kết quả thử nghiệm hiệu năng WebGL",
+    "meshMax": "Mesh tối đa",
+    "verticesTotal": "Vertex tổng",
+    "drawCalls": "Draw call",
+    "avgTitle": "Trung bình tổng hợp",
+    "avgMesh": "Mesh trung bình",
+    "avgVertices": "Vertex trung bình",
+    "avgDrawCalls": "Draw call trung bình",
+    "thanksLead": "Chân thành cảm ơn bạn",
+    "thanksTail": "đã tham gia thử nghiệm này. Đóng góp của bạn sẽ giúp chúng tôi tối ưu hiệu năng 3D trên trình duyệt để mang lại trải nghiệm tốt nhất cho người dùng!"
+  },
+  "geometry": {
+    "box": "Hình hộp (Box)",
+    "sphere": "Hình cầu (Sphere)",
+    "torusKnot": "Hình xoắn (TorusKnot)"
+  }
+}

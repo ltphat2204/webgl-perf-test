@@ -11,7 +11,8 @@ import {
   DeclineMessage,
   ResultsOverlay,
   TestCanvas,
-  MobileNoticeOverlay
+  MobileNoticeOverlay,
+  LanguageSwitcher
 } from '../components'
 
 export default function PerformanceTest() {
@@ -63,6 +64,7 @@ export default function PerformanceTest() {
 
   return (
     <div className="w-screen h-screen relative">
+  <LanguageSwitcher />
       {isMobile && (
         <MobileNoticeOverlay forceShow />
       )}

@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "title": "Real-world WebGL 2.0 performance survey in the browser",
+    "description": "This test measures WebGL 2.0 performance via the stable number of draw calls, meshes, and vertices at 60 FPS. Results are collected to help optimize 3D apps on the web."
+  },
+  "mobile": {
+    "title": "Mobile device detected",
+    "body1": "This WebGL performance test is not intended for mobile users.",
+    "body2": "Please use a desktop or laptop for accurate results and a better experience.",
+    "ok": "Got it"
+  },
+  "welcome": {
+    "title": "🧪 Welcome to the WebGL performance test",
+    "intro": "The app will render many 3D objects to evaluate browser performance. During the test we will collect:",
+    "hardwareTitle": "🖥️ Hardware information:",
+    "cores": "cores",
+    "platform": "Platform",
+    "metricsTitle": "📊 Performance metrics recorded:",
+  "metricMeshLabel": "Maximum number of meshes",
+  "metricMeshTail": "handled smoothly at 60 FPS",
+  "metricVerticesLabel": "Total vertices",
+  "metricVerticesTail": "rendered at the performance threshold",
+  "metricDrawCallsLabel": "Number of GPU draw calls",
+  "metricDrawCallsTail": "per frame",
+    "warning": "⚠️ Please avoid opening extra tabs, heavy apps, or screen recorders during the test to ensure accurate results.",
+    "privacy": "Data is collected only for research and to improve the 3D experience on the web.",
+    "sourceLead": "🔎 The app source code is public at",
+    "sourceTail": "for users to inspect.",
+    "agree": "I agree, start",
+    "decline": "I do not agree"
+  },
+  "decline": {
+    "title": "Thanks for visiting.",
+    "description": "You declined to participate in the test."
+  },
+  "restart": {
+    "title": "Interruption detected!",
+    "body": "You may have switched tabs or encountered a sudden FPS drop. Please try again to ensure accurate results.",
+    "button": "Restart step {step}"
+  },
+  "progress": {
+    "title": "Step {step}/{total}",
+    "test": "Test"
+  },
+  "results": {
+    "title": "WebGL performance test results",
+    "meshMax": "Max meshes",
+    "verticesTotal": "Total vertices",
+    "drawCalls": "Draw calls",
+    "avgTitle": "Aggregated average",
+    "avgMesh": "Average meshes",
+    "avgVertices": "Average vertices",
+    "avgDrawCalls": "Average draw calls",
+    "thanksLead": "Thank you sincerely",
+    "thanksTail": "for taking part in this test. Your contribution helps us optimize 3D performance in the browser for a better user experience!"
+  },
+  "geometry": {
+    "box": "Box",
+    "sphere": "Sphere",
+    "torusKnot": "Torus Knot"
+  }
+}
